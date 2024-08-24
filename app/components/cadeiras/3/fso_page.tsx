@@ -1,7 +1,7 @@
 import React from 'react';
-import DefaultProps from './default_props';
+import DefaultProps from '../../default_props';
 
-const MAEPage = () => {
+const FSOPage = () => {
   const scrollToDiv = (divId: string) => {
     const element = document.getElementById(divId);
     if (element) {
@@ -30,7 +30,7 @@ const MAEPage = () => {
       {/* Div 1 */}
       <div id="div1">
         <DefaultProps
-          title="Matemática Aplicada às Engenharias"
+          title="Sensores e Atuadores"
           description="This is the first part of the course."
         />
       </div>
@@ -54,4 +54,4 @@ const MAEPage = () => {
   );
 };
 
-export default MAEPage;
+export default FSOPage;
