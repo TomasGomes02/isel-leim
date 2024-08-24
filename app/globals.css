@@ -67,13 +67,8 @@ nav ul {
   position: absolute;
   background-color: #616161;
   bottom: 0;
-<<<<<<< HEAD
   left: 0;
   width: 100%;
-=======
-  left: 10%;
-  width: 80%;
->>>>>>> 399ce8f2fa756bccb5869efea08398519c48a5a1
   border-radius: 4px;
   transform: scaleX(0); 
   transition: transform 0.3s ease;
