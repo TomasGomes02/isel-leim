@@ -30,7 +30,7 @@ const SMIPage = () => {
       {/* Div 1 */}
       <div id="div1">
         <DefaultProps
-          title="Sensores e Atuadores"
+          title="Sistemas Multimédia para a Internet"
           description="This is the first part of the course."
         />
       </div>

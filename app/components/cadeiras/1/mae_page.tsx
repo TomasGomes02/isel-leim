@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD:app/components/mae_page.tsx
-import DefaultProps from './default_props';
-import Sidebar from './sidebar';
-import { IDocente } from './interface_docente';   // Import the interface
-=======
 import DefaultProps from '../../default_props';
+import { IDocente } from '../../interface_docente';
+import Sidebar from '../../sidebar';
 
->>>>>>> 7c6c4b9d1426006cd365fcee1167773ef4710904:app/components/cadeiras/1/mae_page.tsx
 
 const MAEPage = () => {
 
