@@ -1,5 +1,6 @@
 import React from 'react';
-import DefaultProps from '../default_props';
+import DefaultProps from '../../default_props';
+
 
 const MAEPage = () => {
   const scrollToDiv = (divId: string) => {
