@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
@@ -30,4 +30,85 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.input-placeholder {
+  color: #ffffff; /* Replace with your desired color */
+}
+
+/* If you want to use Tailwind's utility classes */
+@layer components {
+  .input-placeholder::placeholder {
+    @apply text-white; /* Tailwind utility for text color */
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-item {
+  padding: 15px 10px;
+  color: #83818c;
+  position: relative;
+}
+
+.menu-item:before {
+  content: "";
+  height: 3px;
+  position: absolute;
+  background-color: #616161;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  border-radius: 4px;
+  transform: scaleX(0); 
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover:before {
+  transform: scaleX(1);
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 1.5s ease;
+  border-radius: 10px;
+}
+
+.menu-item:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+  transform: translateY(0px);
+}
+
+.submenu li {
+  padding: 15px;
+  transition: all 1s ease;
+  border-radius: 10px;
+}
+
+.submenu li:hover {
+  background-color: #969696;
+  color: black;
+  cursor: pointer;
+  border-radius: 10px;
 }
