@@ -2,10 +2,35 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-
-import MAEPage from './mae_page';
+import MAEPage from './cadeiras/1/mae_page';
+import MAVPage from './cadeiras/1/mav_page';
+import MDPPage from './cadeiras/1/mdp_page';
+import SAPage from './cadeiras/1/sa_page';
+import TIPage from './cadeiras/1/ti_page';
+import CFPage from './cadeiras/2/cf_page';
+import MCGPage from './cadeiras/2/mcg_page';
+import MOPPage from './cadeiras/2/mop_page';
+import PDSPage from './cadeiras/2/pds_page';
+import RPSPage from './cadeiras/2/rps_page';
+import CPSPage from './cadeiras/3/cps_page';
+import EGPPage from './cadeiras/3/egp_page';
+import FSOPage from './cadeiras/3/fso_page';
+import MSSNPage from './cadeiras/3/mssn_page';
+import PCMPage from './cadeiras/3/pcm_page';
+import AAVPage from './cadeiras/4/aav_page';
+import CSMPage from './cadeiras/4/csm_page';
+import IASAPage from './cadeiras/4/iasa_page';
+import IECDPage from './cadeiras/4/iecd_page';
+import RCPPage from './cadeiras/4/rcp_page';
+import AAPage from './cadeiras/5/aa_page';
+import IPMPage from './cadeiras/5/ipm_page';
+import PIVPage from './cadeiras/5/piv_page';
+import RIPage from './cadeiras/5/ri_page';
+import SBDPage from './cadeiras/5/sbd_page';
+import DAMPage from './cadeiras/6/dam_page';
+import IAVPage from './cadeiras/6/iav_page';
+import ProjetoPage from './cadeiras/6/projeto_page';
 import SMIPage from './smi_page';
-import AAPage from './aa_page';
 
 const Navbar = () => {
 
@@ -15,15 +40,100 @@ const Navbar = () => {
 
       const handleOptionClick = (option: string) => {
         switch (option) {
+          // 1º Semestre
           case 'MAE':
             setSelectedComponent('MAE');
             break;
-          case 'SMI':
-            setSelectedComponent('SMI');
+          case 'MDP':
+            setSelectedComponent('MDP');
+            break;
+          case 'SA':
+            setSelectedComponent('SA');
+            break;
+          case 'MAV':
+            setSelectedComponent('MAV');
+            break;
+          case 'TI':
+            setSelectedComponent('TI');
+            break;
+          // 2º Semestre
+          case 'MCG':
+            setSelectedComponent('MCG');
+            break;
+          case 'RPS':
+            setSelectedComponent('RPS');
+            break;
+          case 'PDS':
+            setSelectedComponent('PDS');
+            break;
+          case 'CF':
+            setSelectedComponent('CF');
+            break;
+          case 'MOP':
+            setSelectedComponent('MOP');
+            break;
+          // 3º Semestre
+          case 'CPS':
+            setSelectedComponent('CPS');
+            break;
+          case 'FSO':
+            setSelectedComponent('FSO');
+            break;
+          case 'PCM':
+            setSelectedComponent('PCM');
+            break;
+          case 'MSSN':
+            setSelectedComponent('MSSN');
+            break;
+          case 'EGP':
+            setSelectedComponent('EGP');
+            break;
+          // 4º Semestre
+          case 'RCP':
+            setSelectedComponent('RCP');
+            break;
+          case 'CSM':
+            setSelectedComponent('CSM');
+            break;
+          case 'IASA':
+            setSelectedComponent('IASA');
+            break;
+          case 'IECD':
+            setSelectedComponent('IECD');
+            break;
+          case 'AAV':
+            setSelectedComponent('AAV');
+            break;
+          // 5º Semestre
+          case 'PIV':
+            setSelectedComponent('PIV');
+            break;
+          case 'RI':
+            setSelectedComponent('RI');
+            break;
+          case 'SBD':
+            setSelectedComponent('SBD');
             break;
           case 'AA':
             setSelectedComponent('AA');
             break;
+          case 'IPM':
+            setSelectedComponent('IPM');
+            break;
+          // 6º Semestre
+          case 'SMI':
+            setSelectedComponent('SMI');
+            break;
+          case 'DAM':
+            setSelectedComponent('DAM');
+            break;
+          case 'IAV':
+            setSelectedComponent('IAV');
+            break;
+          case 'Projeto':
+            setSelectedComponent('Projeto');
+            break;
+
           default:
             setSelectedComponent(null);
             break;
@@ -32,12 +142,76 @@ const Navbar = () => {
     
       const renderComponent = () => {
         switch (selectedComponent) {
+          // 1º Semestre
           case 'MAE':
             return <MAEPage />;
-          case 'SMI':
-            return <SMIPage />;
+          case 'MDP':
+            return <MDPPage />;
+          case 'SA':
+            return <SAPage />;
+          case 'MAV':
+            return <MAVPage />;
+          case 'TI':
+            return <TIPage />;
+
+          // 2º Semestre
+          case 'MCG':
+            return <MCGPage />;
+          case 'RPS':
+            return <RPSPage />;
+          case 'PDS':
+            return <PDSPage />;
+          case 'CF':
+            return <CFPage />;
+          case 'MOP':
+            return <MOPPage />;
+
+          // 3º Semestre
+          case 'CPS':
+            return <CPSPage />;
+          case 'FSO':
+            return <FSOPage />;
+          case 'PCM':
+            return <PCMPage />;
+          case 'MSSN':
+            return <MSSNPage />;
+          case 'EGP':
+            return <EGPPage />;
+
+          // 4º Semestre
+          case 'RCP':
+            return <RCPPage />;
+          case 'CSM':
+            return <CSMPage />;
+          case 'IASA':
+            return <IASAPage />;
+          case 'IECD':
+            return <IECDPage />;
+          case 'AAV':
+            return <AAVPage />;
+
+          // 5º Semestre
+          case 'PIV':
+            return <PIVPage />;
+          case 'RI':
+            return <RIPage />;
+          case 'SBD':
+            return <SBDPage />;
           case 'AA':
             return <AAPage />;
+          case 'IPM':
+            return <IPMPage />;
+
+          // 6º Semestre
+          case 'SMI':
+            return <SMIPage />;
+          case 'DAM':
+            return <DAMPage />;
+          case 'IAV':
+            return <IAVPage />;
+          case 'Projeto':
+            return <ProjetoPage />;
+
           default:
             return <p>Select an option to view the component</p>;
         }
