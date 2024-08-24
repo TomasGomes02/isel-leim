@@ -1,15 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
+import DefaultProps from '../../default_props';
 import { IDocente } from '../../interface_docente';
 import Sidebar from '../../sidebar';
-import DefaultProps from '../../default_props';
 import ContentSections from '../../content_sections';
-=======
-import DefaultProps from '../../default_props';
-import { IDocente } from '../../interface_docente';
-import Sidebar from '../../sidebar';
 
->>>>>>> 399ce8f2fa756bccb5869efea08398519c48a5a1
 
 const MAEPage = () => {
 
