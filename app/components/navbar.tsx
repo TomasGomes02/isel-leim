@@ -30,7 +30,7 @@ import SBDPage from './cadeiras/5/sbd_page';
 import DAMPage from './cadeiras/6/dam_page';
 import IAVPage from './cadeiras/6/iav_page';
 import ProjetoPage from './cadeiras/6/projeto_page';
-import SMIPage from './smi_page';
+import SMIPage from './cadeiras/6/smi_page';
 
 const Navbar = () => {
 
