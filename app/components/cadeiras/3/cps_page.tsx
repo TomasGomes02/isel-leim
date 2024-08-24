@@ -19,16 +19,22 @@ const CPSPage = () => {
       id: 'div1',
       title: 'Comunicações e Processamento de Sinais',
       description: 'This is the first part of the course.',
+      uc: '',
+      ctx: '',
     },
     {
       id: 'div2',
       title: 'Prática',
       description: 'This is the second part of the course.',
+      uc: '',
+      ctx: '',
     },
     {
       id: 'div3',
       title: 'Teórica',
       description: 'This is the third part of the course.',
+      uc: '',
+      ctx: '',
     },
   ];
 

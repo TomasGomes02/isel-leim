@@ -18,16 +18,22 @@ const sections = [
     id: 'div1',
     title: 'Modelação e Simulação de Sistemas Naturais',
     description: 'This is the first part of the course.',
+    uc: '',
+    ctx: '',
   },
   {
     id: 'div2',
     title: 'Prática',
     description: 'This is the second part of the course.',
+    uc: '',
+    ctx: '',
   },
   {
     id: 'div3',
     title: 'Teórica',
     description: 'This is the third part of the course.',
+    uc: '',
+    ctx: '',
   },
 ];
 

@@ -20,16 +20,22 @@ const SMIPage = () => {
       id: 'div1',
       title: 'Sistemas Multimédia para a Internet',
       description: 'This is the first part of the course.',
+      uc: '',
+      ctx: '',
     },
     {
       id: 'div2',
       title: 'Prática',
       description: 'This is the second part of the course.',
+      uc: '',
+      ctx: '',
     },
     {
       id: 'div3',
       title: 'Teórica',
       description: 'This is the third part of the course.',
+      uc: '',
+      ctx: '',
     },
   ];
 
@@ -38,18 +44,8 @@ const SMIPage = () => {
     <div className="container mx-auto p-8">
       <div className="flex">
 
-<<<<<<< HEAD
         {/* Left Side Content */}
         <ContentSections sections={sections} />
-=======
-      {/* Div 1 */}
-      <div id="div1">
-        <DefaultProps
-          title="Sistemas Multimédia para a Internet"
-          description="This is the first part of the course."
-        />
-      </div>
->>>>>>> 399ce8f2fa756bccb5869efea08398519c48a5a1
 
         {/* Right Sidebar */}
         <Sidebar
