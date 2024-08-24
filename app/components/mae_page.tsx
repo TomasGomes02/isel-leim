@@ -1,7 +1,16 @@
 import React from 'react';
 import DefaultProps from './default_props';
+import Sidebar from './sidebar';
+import { IDocente } from './interface_docente';   // Import the interface
 
 const MAEPage = () => {
+
+  const docente: IDocente = {
+    name: 'Professor John Doe',
+    rating: 4.5,
+    description: 'John Doe is an experienced professor with a strong background in mathematics and engineering.',
+  };
+
   const scrollToDiv = (divId: string) => {
     const element = document.getElementById(divId);
     if (element) {
@@ -10,6 +19,7 @@ const MAEPage = () => {
   };
 
   return (
+    <>
     <div className="container mx-auto p-8">
       {/* Navigation Buttons */}
       <div className="flex justify-center space-x-4 mb-8">
@@ -27,30 +37,43 @@ const MAEPage = () => {
         </button>
       </div>
 
-      {/* Div 1 */}
-      <div id="div1">
-        <DefaultProps
-          title="Matemática Aplicada às Engenharias"
-          description="This is the first part of the course."
-        />
-      </div>
+      {/* Main Content Area */}
+      <div className="flex">
+        {/* Left Side Content */}
+        <div className="w-3/4 flex flex-col">
+          {/* Div 1 */}
+          <div id="div1" className="h-full">
+            <DefaultProps
+              title="Matemática Aplicada às Engenharias"
+              description="This is the first part of the course."
+            />
+          </div>
 
-      {/* Div 2 */}
-      <div id="div2">
-        <DefaultProps
-          title="Prática"
-          description="This is the second part of the course."
-        />
-      </div>
+          {/* Div 2 */}
+          <div id="div2" className="h-full">
+            <DefaultProps
+              title="Prática"
+              description="This is the second part of the course."
+            />
+          </div>
 
-      {/* Div 3 */}
-      <div id="div3">
-        <DefaultProps
-          title="Teórica"
-          description="This is the third part of the course."
-        />
+          {/* Div 3 */}
+          <div id="div3" className="h-full">
+            <DefaultProps
+              title="Teórica"
+              description="This is the third part of the course."
+            />
+          </div>
+        </div>
+        {/* Right Sidebar */}
+        <Sidebar
+          title="Docentes"
+          description="This sidebar can contain additional information, links, or anything else you'd like to include."
+          docente={docente}
+          />
       </div>
     </div>
+    </>
   );
 };
 
