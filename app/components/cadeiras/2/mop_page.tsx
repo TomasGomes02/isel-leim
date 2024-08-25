@@ -3,7 +3,7 @@ import ContentSections from '../../content_sections';  // Adjust import path as 
 import Sidebar from '../../sidebar';  // Ensure the import path is correct
 import { IDocente } from '../../interface_docente';  // Ensure the import path is correct
 
-const CPSPage: React.FC = () => {
+const MOPPage: React.FC = () => {
   const docentes: IDocente[] = [
     {
       name: 'Professor John Doe',
@@ -61,4 +61,4 @@ const CPSPage: React.FC = () => {
   );
 };
 
-export default CPSPage;
+export default MOPPage;

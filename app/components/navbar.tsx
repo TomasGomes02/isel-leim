@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import Image from 'next/image';
 import MAEPage from './cadeiras/1/mae_page';
 import MAVPage from './cadeiras/1/mav_page';
@@ -31,191 +31,17 @@ import DAMPage from './cadeiras/6/dam_page';
 import IAVPage from './cadeiras/6/iav_page';
 import ProjetoPage from './cadeiras/6/projeto_page';
 import SMIPage from './cadeiras/6/smi_page';
+import HomePage from './home_page';
 
-const Navbar = () => {
+const Navbar = ({ setSelectedComponent } : {setSelectedComponent: Dispatch<SetStateAction<string | null>>}) => {
 
-    type Semester = '1º Semestre' | '2º Semestre' | '3º Semestre' | '4º Semestre' | '5º Semestre' | '6º Semestre';
-    const [selectedComponent, setSelectedComponent] = useState<string | null>(null);
+    type Semester = 'Página Inicial' | '1º Semestre' | '2º Semestre' | '3º Semestre' | '4º Semestre' | '5º Semestre' | '6º Semestre';
+    //const [selectedComponent, setSelectedComponent] = useState<string | null>('Home');
     const [hoveredButton, setHoveredButton] = useState<Semester | null>(null);
 
-      const handleOptionClick = (option: string) => {
-        switch (option) {
-          // 1º Semestre
-          case 'MAE':
-            setSelectedComponent('MAE');
-            break;
-          case 'MDP':
-            setSelectedComponent('MDP');
-            break;
-          case 'SA':
-            setSelectedComponent('SA');
-            break;
-          case 'MAV':
-            setSelectedComponent('MAV');
-            break;
-          case 'TI':
-            setSelectedComponent('TI');
-            break;
-          // 2º Semestre
-          case 'MCG':
-            setSelectedComponent('MCG');
-            break;
-          case 'RPS':
-            setSelectedComponent('RPS');
-            break;
-          case 'PDS':
-            setSelectedComponent('PDS');
-            break;
-          case 'CF':
-            setSelectedComponent('CF');
-            break;
-          case 'MOP':
-            setSelectedComponent('MOP');
-            break;
-          // 3º Semestre
-          case 'CPS':
-            setSelectedComponent('CPS');
-            break;
-          case 'FSO':
-            setSelectedComponent('FSO');
-            break;
-          case 'PCM':
-            setSelectedComponent('PCM');
-            break;
-          case 'MSSN':
-            setSelectedComponent('MSSN');
-            break;
-          case 'EGP':
-            setSelectedComponent('EGP');
-            break;
-          // 4º Semestre
-          case 'RCP':
-            setSelectedComponent('RCP');
-            break;
-          case 'CSM':
-            setSelectedComponent('CSM');
-            break;
-          case 'IASA':
-            setSelectedComponent('IASA');
-            break;
-          case 'IECD':
-            setSelectedComponent('IECD');
-            break;
-          case 'AAV':
-            setSelectedComponent('AAV');
-            break;
-          // 5º Semestre
-          case 'PIV':
-            setSelectedComponent('PIV');
-            break;
-          case 'RI':
-            setSelectedComponent('RI');
-            break;
-          case 'SBD':
-            setSelectedComponent('SBD');
-            break;
-          case 'AA':
-            setSelectedComponent('AA');
-            break;
-          case 'IPM':
-            setSelectedComponent('IPM');
-            break;
-          // 6º Semestre
-          case 'SMI':
-            setSelectedComponent('SMI');
-            break;
-          case 'DAM':
-            setSelectedComponent('DAM');
-            break;
-          case 'IAV':
-            setSelectedComponent('IAV');
-            break;
-          case 'Projeto':
-            setSelectedComponent('Projeto');
-            break;
-
-          default:
-            setSelectedComponent(null);
-            break;
-        }
-      };
-    
-      const renderComponent = () => {
-        switch (selectedComponent) {
-          // 1º Semestre
-          case 'MAE':
-            return <MAEPage />;
-          case 'MDP':
-            return <MDPPage />;
-          case 'SA':
-            return <SAPage />;
-          case 'MAV':
-            return <MAVPage />;
-          case 'TI':
-            return <TIPage />;
-
-          // 2º Semestre
-          case 'MCG':
-            return <MCGPage />;
-          case 'RPS':
-            return <RPSPage />;
-          case 'PDS':
-            return <PDSPage />;
-          case 'CF':
-            return <CFPage />;
-          case 'MOP':
-            return <MOPPage />;
-
-          // 3º Semestre
-          case 'CPS':
-            return <CPSPage />;
-          case 'FSO':
-            return <FSOPage />;
-          case 'PCM':
-            return <PCMPage />;
-          case 'MSSN':
-            return <MSSNPage />;
-          case 'EGP':
-            return <EGPPage />;
-
-          // 4º Semestre
-          case 'RCP':
-            return <RCPPage />;
-          case 'CSM':
-            return <CSMPage />;
-          case 'IASA':
-            return <IASAPage />;
-          case 'IECD':
-            return <IECDPage />;
-          case 'AAV':
-            return <AAVPage />;
-
-          // 5º Semestre
-          case 'PIV':
-            return <PIVPage />;
-          case 'RI':
-            return <RIPage />;
-          case 'SBD':
-            return <SBDPage />;
-          case 'AA':
-            return <AAPage />;
-          case 'IPM':
-            return <IPMPage />;
-
-          // 6º Semestre
-          case 'SMI':
-            return <SMIPage />;
-          case 'DAM':
-            return <DAMPage />;
-          case 'IAV':
-            return <IAVPage />;
-          case 'Projeto':
-            return <ProjetoPage />;
-
-          default:
-            return <p>Select an option to view the component</p>;
-        }
-      };
+    const handleOptionClick = (option: string) => {
+      setSelectedComponent(option);
+    }
 
       const options: { [key: string]: string[] } = {
       '1º Semestre': ['MAE', 'MDP', 'SA', 'MAV', 'TI'],
@@ -259,6 +85,7 @@ const Navbar = () => {
                   className="menu-item relative"
                   onMouseEnter={() => item !== 'Página Inicial' && setHoveredButton(item as Semester)}
                   onMouseLeave={() => setHoveredButton(null)}
+                  onClick={() => item === 'Página Inicial' && handleOptionClick('Home')}
                 >
                   <a href="#" className="hover:text-gray-400">
                     {item}
@@ -306,10 +133,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      {/* Render the active component */}
-      <main className="p-4">
-        {renderComponent()}
-      </main>
       </>
     );
   };
