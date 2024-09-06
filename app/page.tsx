@@ -111,7 +111,7 @@ export default function Home() {
         return <ProjetoPage />;
 
       case 'Home':
-        return <HomePage />;
+        return <HomePage content={""} />;
 
       default:
         return <p>Select an option to view the component</p>;
