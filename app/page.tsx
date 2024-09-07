@@ -110,8 +110,8 @@ export default function Home() {
       case 'Projeto':
         return <ProjetoPage />;
 
-      case 'Home':
-        return <HomePage content={"This is a test"} />;
+      // case 'Home':
+      //   return <HomePage />;
 
       default:
         return <p>Select an option to view the component</p>;
