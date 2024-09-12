@@ -6,9 +6,9 @@ import { IDocente } from '../../interface_docente';  // Ensure the import path i
 const MOPPage: React.FC = () => {
   const docentes: IDocente[] = [
     {
-      name: 'Professor John Doe',
-      rating: 4.5,
-      description: 'John Doe is an experienced professor with a strong background in mathematics and engineering.',
+      name: 'Pedro Viçoso Fazenda',
+      rating: 2.5,
+      description: 'Pedro Fazenda é Professor Adjunto no Instituto Superior de Engenharia de Lisboa (ISEL), onde iniciou sua jornada acadêmica com uma Licenciatura em Engenharia Informática e de Computadores em 2003. Após isso, prosseguiu seus estudos no Instituto Superior Técnico (IST), concluindo um Mestrado em Sistemas, Decisão e Controlo em 2008 e posteriormente, em 2016, um Doutoramento em parceria com o MIT-Portugal. Durante sua formação, teve a oportunidade de colaborar com diversos profissionais e grupos de pesquisa, incluindo o grupo AnyScale Learning for All (ALFA) do MIT. Atualmente, Pedro concentra-se em tópicos de investigação como aprendizagem automática, IoT e multimédia.',
     },
     {
       name: 'Professor Jane Smith',
